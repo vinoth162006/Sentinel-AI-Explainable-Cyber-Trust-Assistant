@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentinel AI - Cyber Trust Assistant</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-area">
+        <svg class="shield-logo" viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <circle cx="12" cy="11" r="3" class="shield-core"></circle>
+        </svg>
+        <span class="logo-text">Sentinel <span class="logo-accent">AI</span></span>
+      </div>
+      <button id="rescan-btn" title="Re-scan current tab">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Main Screen -->
+    <main class="main-content">
+      <!-- Site Info Card -->
+      <div class="site-info-card">
+        <div class="site-details">
+          <h2 id="site-name" class="site-name">Loading...</h2>
+          <p id="site-url" class="site-url">Analyzing webpage...</p>
+        </div>
+        <div class="protocol-badge" id="protocol-badge">
+          <span id="protocol-text">HTTP</span>
+        </div>
+      </div>
+
+      <!-- Trust Score Visualizer -->
+      <div class="score-card">
+        <div class="score-circle-container">
+          <svg class="score-svg" viewBox="0 0 100 100">
+            <circle class="score-bg" cx="50" cy="50" r="40"></circle>
+            <circle class="score-fill" cx="50" cy="50" r="40" id="score-ring"></circle>
+          </svg>
+          <div class="score-text-container">
+            <span class="score-num" id="score-num">--</span>
+            <span class="score-max">/100</span>
+          </div>
+        </div>
+        <div class="status-indicator">
+          <span class="status-label">RISK LEVEL</span>
+          <span class="status-val" id="status-val">Analyzing</span>
+        </div>
+      </div>
+
+      <!-- Quick Stats / Badges -->
+      <div class="quick-stats">
+        <div class="stat-badge" id="badge-ssl">
+          <span class="stat-icon">🔒</span>
+          <span class="stat-label">SSL: Checking</span>
+        </div>
+        <div class="stat-badge" id="badge-age">
+          <span class="stat-icon">📅</span>
+          <span class="stat-label">Age: Checking</span>
+        </div>
+        <div class="stat-badge" id="badge-ml">
+          <span class="stat-icon">🧠</span>
+          <span class="stat-label">ML: Checking</span>
+        </div>
+      </div>
+
+      <!-- Analysis Accordions -->
+      <div class="analysis-section">
+        <h3 class="section-title">Explainable Trust Factors</h3>
+        
+        <div class="factor-group" id="factors-list">
+          <!-- Dynamically inserted list of factors -->
+          <div class="loading-shimmer">
+            <div class="shimmer-line"></div>
+            <div class="shimmer-line short"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-status">
+        <span class="pulse-dot"></span>
+        <span id="backend-status">Local AI mode</span>
+      </div>
+      <div class="footer-version">v1.0.0</div>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

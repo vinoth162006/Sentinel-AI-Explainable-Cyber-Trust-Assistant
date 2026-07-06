@@ -1,0 +1,29 @@
+{
+  "weights": {
+    "url_length": -0.0003123406300195589,
+    "hostname_length": 0.0059611295349666265,
+    "is_ip": 0.0,
+    "subdomain_count": -1.8982697179672565,
+    "hyphen_count": 3.033723122538087,
+    "at_symbol_count": 0.20991857428615465,
+    "slash_count": -1.0037513889897027,
+    "suspicious_tld": 1.034474603635182,
+    "sensitive_keyword_count": 3.081511157147641,
+    "path_dash_count": 0.17917082152493954,
+    "double_slash_path": 0.0
+  },
+  "bias": -1.7242459347675743,
+  "feature_names": [
+    "url_length",
+    "hostname_length",
+    "is_ip",
+    "subdomain_count",
+    "hyphen_count",
+    "at_symbol_count",
+    "slash_count",
+    "suspicious_tld",
+    "sensitive_keyword_count",
+    "path_dash_count",
+    "double_slash_path"
+  ]
+}
